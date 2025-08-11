@@ -10,7 +10,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ userName, currentStreak, onOpenNotifications }) => {
   return (
-    <header className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 text-white p-3 shadow-lg">
+    <header className="bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 text-white p-3 shadow-lg">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="bg-white/20 p-2 rounded-full">
@@ -18,18 +18,18 @@ const Header: React.FC<HeaderProps> = ({ userName, currentStreak, onOpenNotifica
           </div>
           <div>
             <h1 className="text-lg font-bold">ProgressMind</h1>
-            <p className="text-xs text-purple-100 hidden sm:block">De petites actions pour de grands objectifs</p>
+            <p className="text-xs text-white/80 hidden sm:block">De petites actions pour de grands objectifs</p>
           </div>
         </div>
         
         <div className="flex items-center space-x-2">
           <div className="text-right hidden sm:block">
-            <p className="text-xs text-purple-100">Bonjour,</p>
+            <p className="text-xs text-white/80">Bonjour,</p>
             <p className="text-sm font-semibold">{userName}</p>
           </div>
           
           <div className="bg-white/20 px-2 py-1 rounded-full">
-            <p className="text-xs text-purple-100 hidden sm:block">Série</p>
+            <p className="text-xs text-white/80 hidden sm:block">Série</p>
             <p className="text-sm font-bold text-center">🔥 {currentStreak}</p>
           </div>
           

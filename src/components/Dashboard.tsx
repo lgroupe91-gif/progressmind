@@ -344,23 +344,23 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-400 to-blue-600 text-white p-4 rounded-xl shadow-lg">
+        <div className="bg-gradient-to-br from-secondary-400 to-secondary-600 text-white p-4 rounded-xl shadow-lg">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-blue-100 text-xs">Temps</p>
+              <p className="text-white/80 text-xs">Temps</p>
               <p className="text-2xl font-bold">{Math.floor(routines.reduce((sum, r) => sum + (r.completed ? r.duration : 0), 0) / 60)}h {routines.reduce((sum, r) => sum + (r.completed ? r.duration : 0), 0) % 60}m</p>
             </div>
-            <Clock className="w-8 h-8 text-blue-200" />
+            <Clock className="w-8 h-8 text-white/60" />
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-purple-400 to-purple-600 text-white p-4 rounded-xl shadow-lg">
+        <div className="bg-gradient-to-br from-primary-400 to-primary-600 text-white p-4 rounded-xl shadow-lg">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-purple-100 text-xs">Série</p>
+              <p className="text-white/80 text-xs">Série</p>
               <p className="text-2xl font-bold">{totalStreak}</p>
             </div>
-            <Flame className="w-8 h-8 text-purple-200" />
+            <Flame className="w-8 h-8 text-white/60" />
           </div>
         </div>
       </div>
@@ -371,7 +371,7 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
         {morningRoutines.length > 0 && (
           <div>
             <div className="flex items-center space-x-2 mb-3">
-              <div className="bg-orange-100 p-1.5 rounded-full">
+              <div className="bg-warm-100 p-1.5 rounded-full">
                 <span className="text-lg">🌅</span>
               </div>
               <h2 className="text-lg font-bold text-gray-800">Routines du Matin</h2>
@@ -386,7 +386,7 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
         {afternoonRoutines.length > 0 && (
           <div>
             <div className="flex items-center space-x-2 mb-3">
-              <div className="bg-yellow-100 p-1.5 rounded-full">
+              <div className="bg-warm-200 p-1.5 rounded-full">
                 <span className="text-lg">☀️</span>
               </div>
               <h2 className="text-lg font-bold text-gray-800">Routines de l'Après-midi</h2>
@@ -401,7 +401,7 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
         {eveningRoutines.length > 0 && (
           <div>
             <div className="flex items-center space-x-2 mb-3">
-              <div className="bg-indigo-100 p-1.5 rounded-full">
+              <div className="bg-secondary-100 p-1.5 rounded-full">
                 <span className="text-lg">🌙</span>
               </div>
               <h2 className="text-lg font-bold text-gray-800">Routines du Soir</h2>

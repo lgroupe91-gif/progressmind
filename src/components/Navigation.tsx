@@ -28,8 +28,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
               onClick={() => onTabChange(id)}
               className={`flex flex-col items-center py-2 px-3 min-w-0 flex-1 transition-colors ${
                 activeTab === id
-                  ? 'text-purple-600 bg-purple-50'
-                  : 'text-gray-600 hover:text-purple-600 hover:bg-gray-50'
+                  ? 'text-primary-500 bg-primary-50'
+                  : 'text-gray-600 hover:text-primary-500 hover:bg-gray-50'
               }`}
             >
               <Icon className="w-5 h-5 mb-0.5" />
