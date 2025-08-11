@@ -144,12 +144,12 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
               className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
                 routine.completed
                   ? routine.isGoalLinked 
-                    ? 'bg-primary-500 border-primary-500 text-white hover:bg-primary-400 cursor-pointer'
+                    ? 'bg-purple-500 border-purple-500 text-white hover:bg-purple-400 cursor-pointer'
                     : 'bg-green-500 border-green-500 text-white hover:bg-green-400 cursor-pointer'
                   : needsInput && !routine.inputValue
                   ? 'border-gray-200 bg-gray-100 cursor-not-allowed'
                   : routine.isGoalLinked
-                  ? 'border-primary-300 hover:border-primary-500 cursor-pointer'
+                  ? 'border-purple-300 hover:border-purple-500 cursor-pointer'
                   : 'border-gray-300 hover:border-green-500 cursor-pointer'
               }`}
               title={routine.completed ? 'Cliquer pour décocher' : 'Cliquer pour cocher'}
@@ -166,19 +166,19 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
                 {routine.title}
               </h3>
               {routine.isGoalLinked && (
-                <span className="text-xs bg-primary-100 text-primary-600 px-2 py-1 rounded-full flex items-center space-x-1">
+                <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full flex items-center space-x-1">
                   <Target className="w-3 h-3" />
                   <span>Objectif</span>
                 </span>
               )}
               <span className="text-sm text-gray-500">({routine.duration} min)</span>
               {routine.frequency && routine.frequency !== 'daily' && (
-                <span className="text-xs bg-secondary-100 text-secondary-600 px-2 py-1 rounded-full">
+                <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
                   {getFrequencyLabel(routine.frequency)}
                 </span>
               )}
               {routine.isProgressive && (
-                <span className="text-xs bg-accent-100 text-accent-600 px-2 py-1 rounded-full">
+                <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
                   Semaine {routine.week}
                 </span>
               )}
@@ -285,13 +285,13 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
                         routine.title.includes('Affirmations') ? 'Écris tes affirmations positives...' :
                         'Écris tes pensées...'
                       }
-                      className="w-full p-2 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full p-2 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       rows={3}
                     />
                     <div className="flex space-x-2">
                       <button
                         onClick={() => handleInputSave(routine.id)}
-                        className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm"
+                        className="bg-primary-500 hover:bg-primary-600 text-white px-3 py-1 rounded text-sm"
                       >
                         Sauvegarder
                       </button>
@@ -307,7 +307,7 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
                     </div>
                   </div>
                 ) : routine.inputValue ? (
-                  <div className="bg-blue-50 p-2 rounded text-sm text-gray-700 border-l-4 border-blue-400">
+                  <div className="bg-secondary-50 p-2 rounded text-sm text-gray-700 border-l-4 border-secondary-400">
                     {routine.inputValue}
                   </div>
                 ) : (
