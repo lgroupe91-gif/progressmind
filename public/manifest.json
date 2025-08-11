@@ -1,0 +1,27 @@
+{
+  "name": "ProgressMind",
+  "short_name": "ProgressMind",
+  "description": "De petites actions pour de grands objectifs",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#7c3aed",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["productivity", "lifestyle", "health"],
+  "lang": "fr",
+  "dir": "ltr"
+}
