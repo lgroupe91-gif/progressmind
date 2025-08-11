@@ -144,12 +144,12 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
               className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
                 routine.completed
                   ? routine.isGoalLinked 
-                    ? 'bg-purple-500 border-purple-500 text-white hover:bg-purple-400 cursor-pointer'
+                    ? 'bg-primary-500 border-primary-500 text-white hover:bg-primary-400 cursor-pointer'
                     : 'bg-green-500 border-green-500 text-white hover:bg-green-400 cursor-pointer'
                   : needsInput && !routine.inputValue
                   ? 'border-gray-200 bg-gray-100 cursor-not-allowed'
                   : routine.isGoalLinked
-                  ? 'border-purple-300 hover:border-purple-500 cursor-pointer'
+                  ? 'border-primary-300 hover:border-primary-500 cursor-pointer'
                   : 'border-gray-300 hover:border-green-500 cursor-pointer'
               }`}
               title={routine.completed ? 'Cliquer pour décocher' : 'Cliquer pour cocher'}
@@ -166,19 +166,19 @@ const Dashboard: React.FC<DashboardProps> = ({ routines, onCompleteRoutine, onUp
                 {routine.title}
               </h3>
               {routine.isGoalLinked && (
-                <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full flex items-center space-x-1">
+                <span className="text-xs bg-primary-100 text-primary-600 px-2 py-1 rounded-full flex items-center space-x-1">
                   <Target className="w-3 h-3" />
                   <span>Objectif</span>
                 </span>
               )}
               <span className="text-sm text-gray-500">({routine.duration} min)</span>
               {routine.frequency && routine.frequency !== 'daily' && (
-                <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
+                <span className="text-xs bg-secondary-100 text-secondary-600 px-2 py-1 rounded-full">
                   {getFrequencyLabel(routine.frequency)}
                 </span>
               )}
               {routine.isProgressive && (
-                <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
+                <span className="text-xs bg-accent-100 text-accent-600 px-2 py-1 rounded-full">
                   Semaine {routine.week}
                 </span>
               )}
